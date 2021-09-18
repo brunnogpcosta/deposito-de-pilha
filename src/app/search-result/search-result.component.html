@@ -1,0 +1,19 @@
+<div id="container">
+  <h3 *ngIf="searchString == null; else semSearchString">
+    Depósitos Encontrados
+  </h3>
+  <ng-template #semSearchString>
+    <h3>Depósitos Encontrados para o termo "{{ searchString }}"</h3>
+  </ng-template>
+
+  <div class="content">
+    <div class="card" *ngFor="let deposito of depositos">
+      <div class="img"></div>
+      <ul>
+        <li>Nome: {{ deposito.nome }}</li>
+        <li>{{ deposito.endereco }}</li>
+        <li>{{ deposito.telefone }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

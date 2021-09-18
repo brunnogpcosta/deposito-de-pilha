@@ -1,0 +1,34 @@
+{
+  "depositos": [
+    {
+      "nome": "carrefour",
+      "endereco": "Rua do Carrefour",
+      "telefone": "2332-3232"
+    },
+    {
+      "nome": "carrefour",
+      "endereco": "Rua do Carrefour",
+      "telefone": "2332-3232"
+    },
+    {
+      "nome": "carrefour",
+      "endereco": "Rua do Carrefour",
+      "telefone": "2332-3232"
+    },
+    {
+      "nome": "carrefour",
+      "endereco": "Rua do Carrefour",
+      "telefone": "2332-3232"
+    },
+    {
+      "nome": "carrefour",
+      "endereco": "Rua do Carrefour",
+      "telefone": "2332-3232"
+    },
+    {
+      "nome": "carrefour",
+      "endereco": "Rua do Carrefour",
+      "telefone": "2332-3232"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+#container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#container h3 {
+  margin-bottom: 30px;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  display: grid;
+  width: 340px;
+  grid-template-columns: [img] 1fr [ul] 4fr;
+  background-color: rgb(224, 224, 224);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(153, 153, 153);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid rgb(70, 69, 69);
+  transition: 1s;
+}
+
+.card .img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  background-color: rebeccapurple;
+}
+
+.card ul {
+  list-style: none;
+  text-decoration: none;
+}

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "deposito-de-pilha"
+    }
+  },
+  "defaultProject": "deposito-de-pilha",
+  "cli": {
+    "analytics": false
+  }
 }
