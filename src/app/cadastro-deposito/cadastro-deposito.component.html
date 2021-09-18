@@ -1,15 +1,15 @@
 <div id="content">
-  <h3>Cadastro de Deposito</h3>
+  <h3>Cadastro de Depósito</h3>
 
-  <form>
+  <form (ngSubmit)="cadastrar()">
     <label>Nome do Deposito</label>
-    <input type="text" />
+    <input type="text" [(ngModel)]="deposito.nome" name="something" />
 
     <label>Endereço</label>
-    <input type="text" />
+    <input type="text" [(ngModel)]="deposito.endereco" name="something" />
 
     <label>Telefone</label>
-    <input type="text" />
+    <input type="text" [(ngModel)]="deposito.telefone" name="something" />
 
     <input type="submit" value="Salvar" />
   </form>

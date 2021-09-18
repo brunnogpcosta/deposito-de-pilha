@@ -2,6 +2,9 @@
   width: 90%;
   margin: 0 auto;
   margin-top: 50px;
+  border: 1px solid rgb(223, 223, 223);
+  box-shadow: 0px 0px 2px rgb(182, 182, 182);
+  padding: 20px;
 }
 
 form {
@@ -17,4 +20,7 @@ form input {
 
 form input[type="submit"] {
   margin-top: 10px;
+  background-color: rgb(41, 187, 97);
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
 }

@@ -1,34 +1,52 @@
 {
   "depositos": [
     {
+      "id": 1,
       "nome": "carrefour",
       "endereco": "Rua do Carrefour",
       "telefone": "2332-3232"
     },
     {
+      "id": 2,
       "nome": "carrefour",
       "endereco": "Rua do Carrefour",
       "telefone": "2332-3232"
     },
     {
+      "id": 3,
       "nome": "carrefour",
       "endereco": "Rua do Carrefour",
       "telefone": "2332-3232"
     },
     {
+      "id": 4,
       "nome": "carrefour",
       "endereco": "Rua do Carrefour",
       "telefone": "2332-3232"
     },
     {
+      "id": 5,
       "nome": "carrefour",
       "endereco": "Rua do Carrefour",
       "telefone": "2332-3232"
     },
     {
+      "id": 6,
       "nome": "carrefour",
       "endereco": "Rua do Carrefour",
       "telefone": "2332-3232"
+    },
+    {
+      "nome": "Guanabara",
+      "endereco": "Eua do Guanabara",
+      "telefone": "3333-3333",
+      "id": 7
+    },
+    {
+      "nome": "Atibaia",
+      "endereco": "rua do atibaia",
+      "telefone": "4545-6969",
+      "id": 8
     }
   ]
 }

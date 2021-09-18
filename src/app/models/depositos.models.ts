@@ -1,6 +1,9 @@
 export interface Deposito {
   id?: number | string;
   nome: string;
-  endeereco: string;
+  endereco: string;
   telefone: string;
 }
+
+
+
