@@ -16,11 +16,11 @@
 }
 
 #header ul li {
-  padding: 10px 20px;
+  padding: 10px;
   display: inline-block;
-  cursor: pointer;
 }
 
-#header ul li:hover {
-  background-color: rgb(204, 204, 204);
+#header ul li a {
+  text-decoration: none;
+  color: black;
 }

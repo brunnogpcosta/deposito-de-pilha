@@ -47,6 +47,12 @@
       "endereco": "rua do atibaia",
       "telefone": "4545-6969",
       "id": 8
+    },
+    {
+      "nome": "Juraci Moveis",
+      "endereco": "Rua do Juraci",
+      "telefone": "2121- 5656",
+      "id": 9
     }
   ]
 }

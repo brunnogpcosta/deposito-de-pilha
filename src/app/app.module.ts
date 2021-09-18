@@ -9,14 +9,16 @@ import { SearchStringComponent } from './search-string/search-string.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { CadastroDepositoComponent } from './cadastro-deposito/cadastro-deposito.component';
+import { DepositoDatailComponent } from './deposito-datail/deposito-datail.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     SearchResultComponent,
     SearchStringComponent,
     HeaderComponent,
-      CadastroDepositoComponent
+      CadastroDepositoComponent,
+      DepositoDatailComponent
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

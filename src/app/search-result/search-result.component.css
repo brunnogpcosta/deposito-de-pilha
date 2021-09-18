@@ -11,17 +11,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .card {
   display: grid;
-  width: 340px;
+  width: 300px;
   grid-template-columns: [img] 1fr [ul] 4fr;
-  background-color: rgb(224, 224, 224);
+  background-color: rgba(41, 187, 97, 0.123);
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid rgb(153, 153, 153);
+  border: 1px solid rgb(201, 255, 210);
   transition: 1s;
   cursor: pointer;
 }
@@ -42,7 +43,7 @@
   width: 80px;
   height: 80px;
   margin-right: 10px;
-  background-color: rebeccapurple;
+  background-color: rgb(51, 153, 110);
 }
 
 .card ul {

@@ -2,6 +2,7 @@ import { DepositosService } from './../services/depositos.service';
 import { HttpClient } from '@angular/common/http';
 import { Deposito } from './../models/depositos.models';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-deposito',
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class CadastroDepositoComponent implements OnInit {
   deposito: any = {};
 
-  constructor(private service: DepositosService) {}
+  constructor(private service: DepositosService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -19,6 +20,7 @@ export class CadastroDepositoComponent implements OnInit {
     this.service.adicionarDeposito(this.deposito).subscribe(
       (result) => {
         console.log(result);
+        this.router.navigateByUrl('depositos');
       },
       (error) => {
         console.error(error);

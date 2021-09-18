@@ -11,7 +11,11 @@
   </ng-template>
 
   <div class="content">
-    <div class="card" *ngFor="let deposito of depositos">
+    <div
+      class="card"
+      *ngFor="let deposito of depositos"
+      (click)="goToDetail(deposito)"
+    >
       <div class="img"></div>
       <ul>
         <li>{{ deposito.nome }}</li>

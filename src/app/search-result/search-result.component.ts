@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DepositosService } from './../services/depositos.service';
 import { Deposito } from './../models/depositos.models';
 import { Component, Input, OnInit } from '@angular/core';
@@ -14,7 +15,7 @@ export class SearchResultComponent implements OnInit {
 
   myString: string;
 
-  constructor(private service: DepositosService) {}
+  constructor(private service: DepositosService, private router: Router) {}
 
   ngOnInit(): void {
     this.service.depositosCadastrados().subscribe((depositos: Deposito[]) => {
@@ -27,5 +28,10 @@ export class SearchResultComponent implements OnInit {
   mySearchString($event) {
     console.log('Header: ', $event);
     this.myString = $event;
+  }
+
+  goToDetail(detail) {
+    console.log('Detalhe: ', detail);
+    this.router.navigateByUrl('/detalhe/:' + detail.id);
   }
 }

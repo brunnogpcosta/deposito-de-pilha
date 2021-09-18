@@ -1,5 +1,10 @@
 <form (ngSubmit)="mySearchString()">
   <label for="Pesquisar"></label>
-  <input type="text" [(ngModel)]="searchString" name="searchString" />
+  <input
+    type="text"
+    [(ngModel)]="searchString"
+    name="searchString"
+    placeholder="digite um endereço"
+  />
   <input type="submit" value="O-" />
 </form>
