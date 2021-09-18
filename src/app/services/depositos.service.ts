@@ -1,7 +1,8 @@
+import { Deposito } from './../models/depositos.models';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Deposito } from '../models/depositos.models';
+
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +17,7 @@ export class DepositosService {
     return this.httpClient.get<Deposito[]>(this.url);
   }
 
-  adicionarDeposito(depositos) {
-    this.depositos.push(depositos);
+  adicionarDeposito(deposito: Deposito): Observable<Deposito> {
+    return this.httpClient.post<Deposito>(this.url, deposito);
   }
 }

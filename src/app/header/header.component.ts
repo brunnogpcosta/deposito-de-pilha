@@ -6,18 +6,9 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() searcStringHeader = new EventEmitter<string>();
-
-  countResult: number;
-  searchString: string;
-
-  constructor() {}
+ constructor() {}
 
   ngOnInit(): void {}
 
-  mySearchString($event) {
-    console.log('Header: ', $event);
-    this.searchString = $event;
-    this.searcStringHeader.emit(this.searchString);
-  }
+
 }

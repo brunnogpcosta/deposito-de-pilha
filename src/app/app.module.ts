@@ -8,14 +8,16 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { SearchStringComponent } from './search-string/search-string.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { CadastroDepositoComponent } from './cadastro-deposito/cadastro-deposito.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     SearchResultComponent,
     SearchStringComponent,
     HeaderComponent,
-  ],
+      CadastroDepositoComponent
+   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

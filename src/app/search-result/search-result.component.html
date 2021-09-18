@@ -1,12 +1,12 @@
 <div id="container">
+  <app-search-string (whenSearch)="mySearchString($event)"></app-search-string>
+
   <h3 *ngIf="searchString == null; else semSearchString">
     {{ qtd_depositos }} Depósitos Encontrados
   </h3>
   <ng-template #semSearchString>
     <h3>
-      {{ qtd_depositos }} Depósitos Encontrados para o termo "{{
-        searchString
-      }}"
+      {{ qtd_depositos }} Depósitos Encontrados para o termo "{{ myString }}"
     </h3>
   </ng-template>
 

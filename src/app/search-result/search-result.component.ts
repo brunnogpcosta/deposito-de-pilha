@@ -12,6 +12,8 @@ export class SearchResultComponent implements OnInit {
   depositos: any[];
   qtd_depositos: number;
 
+  myString: string;
+
   constructor(private service: DepositosService) {}
 
   ngOnInit(): void {
@@ -20,5 +22,10 @@ export class SearchResultComponent implements OnInit {
       this.depositos = depositos;
       this.qtd_depositos = depositos.length;
     });
+  }
+
+  mySearchString($event) {
+    console.log('Header: ', $event);
+    this.myString = $event;
   }
 }
