@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SearchResultComponent implements OnInit {
   @Input() searchString: string;
   depositos: any[];
+  qtd_depositos: number;
 
   constructor(private service: DepositosService) {}
 
@@ -17,6 +18,7 @@ export class SearchResultComponent implements OnInit {
     this.service.depositosCadastrados().subscribe((depositos: Deposito[]) => {
       console.table(depositos);
       this.depositos = depositos;
+      this.qtd_depositos = depositos.length;
     });
   }
 }

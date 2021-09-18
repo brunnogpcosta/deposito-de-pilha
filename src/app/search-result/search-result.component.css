@@ -26,9 +26,16 @@
   cursor: pointer;
 }
 
+.card li:first-child {
+  font-weight: Bold;
+  text-transform: uppercase;
+}
+
 .card:hover {
-  border: 1px solid rgb(70, 69, 69);
-  transition: 1s;
+  border: 1px solid rgb(0, 0, 0);
+  transition: 0.8s;
+
+  box-shadow: 0px 0px 5px rgb(160, 160, 160);
 }
 
 .card .img {
@@ -41,4 +48,21 @@
 .card ul {
   list-style: none;
   text-decoration: none;
+}
+
+#paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#paginacao button {
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#paginacao p {
+  margin-right: 10px;
 }
