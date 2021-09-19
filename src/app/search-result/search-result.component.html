@@ -1,19 +1,35 @@
 <div id="container">
   <app-search-string (whenSearch)="mySearchString($event)"></app-search-string>
 
-  <h3 *ngIf="searchString == null; else semSearchString">
-    {{ qtd_depositos }} Depósitos Encontrados
-  </h3>
-  <ng-template #semSearchString>
-    <h3>
-      {{ qtd_depositos }} Depósitos Encontrados para o termo "{{ myString }}"
+  <div class="content-result">
+    <h3 *ngIf="searchString == null; else semSearchString">
+      {{ qtd_depositos }} Depósitos Encontrados
     </h3>
-  </ng-template>
+
+    <ng-template #semSearchString>
+      <h3>
+        {{ qtd_depositos }} Depósitos Encontrados para o termo "{{ myString }}"
+      </h3>
+    </ng-template>
+
+    <select
+      id="itens"
+      name="itens"
+      (change)="escolhaLimit($event.target.value)"
+    >
+      <option value="3">3</option>
+      <option selected value="6">6</option>
+      <option value="9">9</option>
+    </select>
+  </div>
 
   <div class="content">
     <div
       class="card"
-      *ngFor="let deposito of depositos"
+      *ngFor="
+        let deposito of depositos | slice: startLimit:limit;
+        let i = index
+      "
       (click)="goToDetail(deposito)"
     >
       <div class="img"></div>
@@ -26,8 +42,10 @@
   </div>
 
   <div id="paginacao">
-    <button>Anterior</button>
-    <p>1 de 20</p>
-    <button>Próximo</button>
+    <button (click)="prevPage()" [disabled]="startLimit == 0">Anterior</button>
+    <p>{{ paginaAtual }} de {{ paginaDisponiveis }}</p>
+    <button (click)="nextPage()" [disabled]="limit >= qtd_depositos">
+      Próximo
+    </button>
   </div>
 </div>
