@@ -44,24 +44,24 @@ export class SearchResultComponent implements OnInit {
     this.paginaAtual = 1;
     this.calculaPaginas();
 
-    console.log('Option: ', this.selectedOption);
+    //console.log('Option: ', this.selectedOption);
   }
 
   mySearchString($event) {
-    console.log('Header: ', $event);
+    //console.log('Header: ', $event);
     this.myString = $event;
   }
 
   goToDetail(detail) {
-    console.log('Detalhe: ', detail);
+    //console.log('Detalhe: ', detail);
     this.router.navigateByUrl('/detalhe/:' + detail.id);
   }
 
   nextPage() {
     this.startLimit = this.limit;
     this.limit += this.selectedOption;
-    console.log('Limite: ' + this.limit);
-    console.log('Start Limit: ' + this.startLimit);
+    //console.log('Limite: ' + this.limit);
+    //console.log('Start Limit: ' + this.startLimit);
     this.paginaAtual += 1;
   }
 
@@ -69,7 +69,7 @@ export class SearchResultComponent implements OnInit {
     this.startLimit = this.startLimit - this.selectedOption;
     this.limit -= this.selectedOption;
     this.paginaAtual -= 1;
-    console.log('Limite: ' + this.limit);
-    console.log('Start Limit: ' + this.startLimit);
+    //console.log('Limite: ' + this.limit);
+    //console.log('Start Limit: ' + this.startLimit);
   }
 }
