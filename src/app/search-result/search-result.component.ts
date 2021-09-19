@@ -11,6 +11,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SearchResultComponent implements OnInit {
   @Input() searchString: string;
   //@Output() requestParams = new EventEmitter<string>();
+  imgClean = '../../assets/undraw_No_data_re_kwbl.png';
 
   depositos: any[];
   qtd_depositos: number;

@@ -23,7 +23,7 @@
     </select>
   </div>
 
-  <div class="content">
+  <div class="content" *ngIf="qtd_depositos > 0; else semNada">
     <div
       class="card"
       *ngFor="
@@ -43,9 +43,17 @@
 
   <div id="paginacao">
     <button (click)="prevPage()" [disabled]="startLimit == 0">Anterior</button>
+
     <p>{{ paginaAtual }} de {{ paginaDisponiveis }}</p>
+
     <button (click)="nextPage()" [disabled]="limit >= qtd_depositos">
       Próximo
     </button>
   </div>
+
+  <ng-template #semNada>
+    <div class="continerImgSemNada">
+      <img [src]="imgClean" class="imagemSemItens" />
+    </div>
+  </ng-template>
 </div>

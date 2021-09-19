@@ -79,3 +79,14 @@
 #paginacao p {
   margin-right: 10px;
 }
+
+.continerImgSemNada {
+  text-align: center;
+}
+
+.imagemSemItens {
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
