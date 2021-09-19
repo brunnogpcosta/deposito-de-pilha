@@ -53,6 +53,12 @@
       "endereco": "Rua do Juraci",
       "telefone": "2121- 5656",
       "id": 9
+    },
+    {
+      "nome": "Deposito do Seu Antônio",
+      "endereco": "Estrada do Antônio",
+      "telefone": "(21) 2365-4578",
+      "id": 10
     }
   ]
 }

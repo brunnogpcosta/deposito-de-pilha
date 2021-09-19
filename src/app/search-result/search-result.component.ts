@@ -37,7 +37,7 @@ export class SearchResultComponent implements OnInit {
     if (this.qtd_depositos < this.selectedOption) {
       this.paginaDisponiveis = 1;
     } else {
-      this.paginaDisponiveis = Math.round(
+      this.paginaDisponiveis = Math.ceil(
         this.qtd_depositos / this.selectedOption
       );
     }
