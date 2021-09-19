@@ -32,9 +32,13 @@ export class SearchResultComponent implements OnInit {
   }
 
   calculaPaginas() {
-    this.paginaDisponiveis = Math.round(
-      this.qtd_depositos / this.selectedOption
-    );
+    if (this.qtd_depositos < this.selectedOption) {
+      this.paginaDisponiveis = 1;
+    } else {
+      this.paginaDisponiveis = Math.round(
+        this.qtd_depositos / this.selectedOption
+      );
+    }
   }
 
   escolhaLimit($event) {
@@ -48,8 +52,18 @@ export class SearchResultComponent implements OnInit {
   }
 
   mySearchString($event) {
-    //console.log('Header: ', $event);
+    console.log('Header: ', $event);
     this.myString = $event;
+
+    this.service.depositosCadastrados().subscribe((depositos: Deposito[]) => {
+      this.depositos = depositos.filter(
+        (deposito) =>
+          deposito.endereco.toLowerCase().indexOf(this.myString.toLowerCase()) >
+          -1
+      );
+      this.qtd_depositos = this.depositos.length;
+      this.calculaPaginas();
+    });
   }
 
   goToDetail(detail) {
