@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { DepositosService } from './../services/depositos.service';
 import { Deposito } from './../models/depositos.models';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-search-result',
@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SearchResultComponent implements OnInit {
   @Input() searchString: string;
+  //@Output() requestParams = new EventEmitter<string>();
 
   depositos: any[];
   qtd_depositos: number;
@@ -68,6 +69,7 @@ export class SearchResultComponent implements OnInit {
 
   goToDetail(detail) {
     //console.log('Detalhe: ', detail);
+    // this.requestParams.emit(detail.id);
     this.router.navigateByUrl('/detalhe/:' + detail.id);
   }
 

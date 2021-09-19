@@ -1,11 +1,17 @@
 <div id="painel-detalhe">
-  <h3>Detalhes da Empresa</h3>
+  <!--h3>Detalhes da Empresa</!--h3-->
   <div class="content-painel">
     <ul id="painel-detalhe-esquerda">
-      <li>Nome: Carrefour</li>
-      <li>Endereço: Rua do Carrefour</li>
-      <li>Telefone: 2424-2121</li>
+      <li>
+        <b>{{ deposito.nome }}</b>
+      </li>
+      <li>Endereço: {{ deposito.endereco }}</li>
+      <li>Telefone:{{ deposito.telefone }}</li>
     </ul>
-    <div id="painel-detalhe-direita"></div>
+    <div id="painel-detalhe-direita">
+      <img [src]="image" />
+      <h4>Botafogo</h4>
+      <p>Rio de Janeiro - RJ</p>
+    </div>
   </div>
 </div>
