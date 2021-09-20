@@ -1,21 +1,26 @@
 form {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 95%;
   height: 30px;
   outline: none;
   border: 1px solid rgb(0, 0, 0);
   padding-left: 15px;
 }
-input[type="submit"] {
-  width: 30px;
-  height: 32px;
+input[type="image"] {
   border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(231, 231, 231);
   position: relative;
-  left: 540px;
-  top: -32px;
   cursor: pointer;
+  top: 12px;
+  right: 1px;
+  padding: 3px;
 }
+
+input[type="image"]:hover {
+  background-color: rgb(209, 209, 209);
+}
+

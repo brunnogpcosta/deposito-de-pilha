@@ -9,6 +9,7 @@ import { EventEmitter } from '@angular/core';
 export class SearchStringComponent implements OnInit {
   @Output() whenSearch = new EventEmitter<string>();
 
+  search: string = '../../assets/search.svg';
   searchString: string = '';
 
   constructor() {}

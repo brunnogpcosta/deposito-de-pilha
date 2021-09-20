@@ -1,11 +1,11 @@
 #container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 0px;
 }
 
-#container h3 {
-  margin: 10px 0 30px 0;
+#container h4 {
+  margin: 20px 0 30px 0;
 }
 .content {
   display: flex;
@@ -47,7 +47,6 @@
 .card:hover {
   border: 1px solid rgb(0, 0, 0);
   transition: 0.8s;
-
   box-shadow: 0px 0px 5px rgb(160, 160, 160);
 }
 

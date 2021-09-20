@@ -2,14 +2,14 @@
   <app-search-string (whenSearch)="mySearchString($event)"></app-search-string>
 
   <div class="content-result">
-    <h3 *ngIf="searchString == null; else semSearchString">
+    <h4 *ngIf="myString == null || myString == ''; else semSearchString">
       {{ qtd_depositos }} Depósitos Encontrados
-    </h3>
+    </h4>
 
     <ng-template #semSearchString>
-      <h3>
+      <h4>
         {{ qtd_depositos }} Depósitos Encontrados para o termo "{{ myString }}"
-      </h3>
+      </h4>
     </ng-template>
 
     <select
