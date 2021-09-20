@@ -59,6 +59,24 @@
       "endereco": "Estrada do Antônio",
       "telefone": "(21) 2365-4578",
       "id": 10
+    },
+    {
+      "nome": "Deposito do Gustavo",
+      "endereco": "Rua do Gustavo, N 23",
+      "telefone": "2121-3654",
+      "id": 11
+    },
+    {
+      "nome": "Deposito Sendas",
+      "endereco": "Rua das Sendas",
+      "telefone": "6969-9595",
+      "id": 12
+    },
+    {
+      "nome": "Deposito do Brunno",
+      "endereco": "Rua da Contratação",
+      "telefone": "2125-6575",
+      "id": 13
     }
   ]
 }

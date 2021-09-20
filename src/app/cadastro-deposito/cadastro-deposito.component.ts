@@ -20,7 +20,7 @@ export class CadastroDepositoComponent implements OnInit {
     this.service.adicionarDeposito(this.deposito).subscribe(
       (result) => {
         console.log(result);
-        this.router.navigateByUrl('depositos');
+        this.router.navigateByUrl('/index');
       },
       (error) => {
         console.error(error);
