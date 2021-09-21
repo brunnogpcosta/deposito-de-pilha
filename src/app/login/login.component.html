@@ -1,11 +1,28 @@
-<form (ngSubmit)="validaLogin()">
-  <h3>Acesse</h3>
+<form (ngSubmit)="validaLogin()" *ngIf="temCadastro; else semCadastro">
+  <h3>Acesso</h3>
   <label>Informe o E-mail</label>
   <input type="email" [(ngModel)]="login.email" name="login" />
 
   <label>Informe a Senha</label>
   <input type="password" [(ngModel)]="login.senha" name="senha" />
 
-  <p>Não tem cadastro? <a href="#">Clique Aqui</a></p>
+  <p>Não tenho cadastro? <a (click)="setaCadastro()">Clique Aqui</a></p>
   <input type="submit" value="Acessar" />
 </form>
+
+<ng-template #semCadastro>
+  <form (ngSubmit)="cadastraUsuario()">
+    <h3>Cadastro</h3>
+    <label>Informe o E-mail</label>
+    <input type="email" [(ngModel)]="login.email" name="login" />
+
+    <label>Informe a Senha</label>
+    <input type="password" [(ngModel)]="login.senha" name="senha" />
+
+    <label>Repita a Senha</label>
+    <input type="password" [(ngModel)]="login.confereSenha" name="senha" />
+
+    <p>Já tenho cadastro? <a (click)="setaCadastro()">Clique Aqui</a></p>
+    <input type="submit" value="Cadastrar" />
+  </form>
+</ng-template>

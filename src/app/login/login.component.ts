@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   login: any = {};
+  temCadastro: boolean = true;
 
   constructor() {}
 
@@ -14,5 +15,19 @@ export class LoginComponent implements OnInit {
 
   validaLogin() {
     console.table({ login: this.login.email, senha: this.login.senha });
+  }
+
+  cadastraUsuario() {
+    console.table({
+      login: this.login.email,
+      senha: this.login.senha,
+      repeteSenha: this.login.confereSenha,
+    });
+  }
+
+  setaCadastro() {
+    this.temCadastro == true
+      ? (this.temCadastro = false)
+      : (this.temCadastro = true);
   }
 }
