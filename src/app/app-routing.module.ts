@@ -3,12 +3,14 @@ import { CadastroDepositoComponent } from './cadastro-deposito/cadastro-deposito
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'cadastro-deposito', component: CadastroDepositoComponent },
   { path: 'index', component: SearchResultComponent },
   { path: 'detalhe/:nomeDeposito', component: DepositoDatailComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

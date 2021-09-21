@@ -3,12 +3,14 @@
 
   <div class="content-result">
     <h4 *ngIf="myString == null || myString == ''; else semSearchString">
-      {{ qtd_depositos }} Depósitos Encontrados
+      {{ qtd_depositos }} Depósito(s) Encontrado(s)
     </h4>
 
     <ng-template #semSearchString>
       <h4>
-        {{ qtd_depositos }} Depósitos Encontrados para o termo "{{ myString }}"
+        {{ qtd_depositos }} Depósito(s) Encontrado(s) para o termo "{{
+          myString
+        }}"
       </h4>
     </ng-template>
 

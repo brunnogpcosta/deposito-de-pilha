@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { CadastroDepositoComponent } from './cadastro-deposito/cadastro-deposito.component';
 import { DepositoDatailComponent } from './deposito-datail/deposito-datail.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [		
@@ -18,7 +19,8 @@ import { DepositoDatailComponent } from './deposito-datail/deposito-datail.compo
     SearchStringComponent,
     HeaderComponent,
       CadastroDepositoComponent,
-      DepositoDatailComponent
+      DepositoDatailComponent,
+      LoginComponent
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -1,11 +1,17 @@
 <div id="header">
   <ul>
-    <li routerLinkActive="ativo">
-      <a routerLink="cadastro-deposito" routerLinkActive="ativo">Cadastrar</a>
+    <li routerLinkActive="">
+      <a routerLink="login" routerLinkActive=""><img [src]="user" /></a>
     </li>
-    <li routerLinkActive="ativo">
-      <a routerLink="index" routerLinkActive="ativo">Depósitos</a>
-    </li>
+    <div id="menu-direita">
+      <li routerLinkActive="ativo">
+        <a routerLink="cadastro-deposito" routerLinkActive="ativo">Cadastrar</a>
+      </li>
+      <li routerLinkActive="ativo">
+        <a routerLink="index" routerLinkActive="ativo">Depósitos</a>
+      </li>
+    </div>
   </ul>
+
   <h1>Depósito de Pilhas</h1>
 </div>
