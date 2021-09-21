@@ -1,10 +1,10 @@
-<form>
+<form (ngSubmit)="validaLogin()">
   <h3>Acesse</h3>
   <label>Informe o E-mail</label>
-  <input type="email" />
+  <input type="email" [(ngModel)]="login.email" name="login" />
 
   <label>Informe a Senha</label>
-  <input type="password" />
+  <input type="password" [(ngModel)]="login.senha" name="senha" />
 
   <p>Não tem cadastro? <a href="#">Clique Aqui</a></p>
   <input type="submit" value="Acessar" />
